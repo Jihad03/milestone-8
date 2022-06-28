@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/milestone-8/static/css/main.79d4160c.css",
+    "main.js": "/milestone-8/static/js/main.05fa462c.js",
+    "static/js/787.d271b498.chunk.js": "/milestone-8/static/js/787.d271b498.chunk.js",
+    "index.html": "/milestone-8/index.html",
+    "main.79d4160c.css.map": "/milestone-8/static/css/main.79d4160c.css.map",
+    "main.05fa462c.js.map": "/milestone-8/static/js/main.05fa462c.js.map",
+    "787.d271b498.chunk.js.map": "/milestone-8/static/js/787.d271b498.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79d4160c.css",
+    "static/js/main.05fa462c.js"
+  ]
+}
