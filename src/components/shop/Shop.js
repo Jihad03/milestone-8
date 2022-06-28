@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from "react";
+import {
+  addToLocalStorage,
+  getDataFromLocalStorage,
+} from "../../utilities/fakeDb";
 import Cart from "../cart/Cart";
 import Products from "../products/Products";
 import "./Shop.css";
@@ -19,7 +23,27 @@ const Shop = () => {
   const handleAddToCart = (product) => {
     const newCart = [...cart, product];
     setCart(newCart);
+    addToLocalStorage(product.id);
   };
+
+  // Fetching Data from localStorage to display in the cart ui
+  useEffect(() => {
+    if (products.length) {
+      const storedData = getDataFromLocalStorage();
+      const temporaryCart = [];
+      for (const key in storedData) {
+        const addedProduct = products.find(
+          (product) => product.id === parseInt(key)
+        );
+        if (addedProduct) {
+          addedProduct.quantity = storedData[key];
+          temporaryCart.push(addedProduct);
+        }
+      }
+      setCart(temporaryCart);
+    }
+  }, [products]);
+
   return (
     <section className="shop-section">
       <div className="products-container">

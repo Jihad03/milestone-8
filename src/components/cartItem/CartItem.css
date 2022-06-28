@@ -1,0 +1,26 @@
+.cart-item {
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px dashed #dadada;
+}
+
+.cart-item-img {
+  width: 60px;
+}
+
+.cart-item-img img {
+  width: 100%;
+}
+
+.cart-item-details {
+  text-align: left;
+  margin-left: 5px;
+}
+
+.cart-item-details h3,
+p {
+  font-size: 12px;
+}
